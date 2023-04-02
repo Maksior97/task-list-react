@@ -6,10 +6,6 @@ import Section from "./Section";
 import Header from './Header';
 import Container from './Container';
 
-const tasks = [
-  {id: 1, content: "testowe zadanie 1", done: false},
-  {id: 2, content: "testowe zadanie 2", done: true},
-];
 
 const hideDoneTasks = false;
 
