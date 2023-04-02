@@ -1,19 +1,19 @@
 import "./style.css";
 
-const Tasks = (props) => (
+const Tasks = ({tasks, hideDoneTasks}) => (
     <ul className="tasks">
-        {props.tasks.map(task =>
+        {tasks.map (task =>
             <li
                 key={task.id}
-                className={`${task.done && props.hideDoneTasks ? 
+                className={`${tasks.done && hideDoneTasks ? 
                 "tasks__element--hidden" : ""}`}>
             <button 
                 className="tasks__button tasks__button--toggleDone"> 
-                {task.done ? "✔" : ""} 
+                {tasks.done ? "✔" : ""}
             </button>
             <span
                 className={`tasks__content 
-                ${task.done ? "tasks__content--done" : 
+                ${tasks.done ? "tasks__content--done" : 
                 ""}`}>
                 {task.content} 
             </span>
@@ -23,10 +23,5 @@ const Tasks = (props) => (
             </li>)}
     </ul>
     );
-
-const tasks = [
-    {id: 1, content: "testowe zadanie 1", done: false},
-    {id: 2, content: "testowe zadanie 2", done: true},
-  ];
 
   export default Tasks;
