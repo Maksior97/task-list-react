@@ -7,7 +7,7 @@ import Header from './Header';
 import Container from './Container';
 
 
-function App() {
+function App() { 
   const [hideDone, sethideDone] = useState(false);
   const [tasks, setTasks] = useState([
     {id: 1, content: "testowe zadanie 1", done: false},
