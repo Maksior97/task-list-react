@@ -12,13 +12,15 @@ const onFormSubmit = (event) => {
 
     return(
         <form className="form" onSubmit={onFormSubmit}>
-            <input
+            <
+            input
             value={newTaskContent}
             className="form__newTask"
             placeholder="Co jest do zrobienia?"
             onChange={(event) => setNewTaskContent(event.target.value)}
             />
-            <button 
+            <
+            button 
             className="form__button"
             >
             Dodaj zadanie
